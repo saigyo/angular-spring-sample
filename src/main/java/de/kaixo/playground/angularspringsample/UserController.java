@@ -19,9 +19,21 @@ public class UserController {
     return (List<User>) userRepository.findAll();
   }
 
+  @GetMapping("/users/{id}")
+  public User getUser(@PathVariable long id) {
+    return userRepository.findById(id).orElse(null);
+  }
+
   @PostMapping("/users")
   void addUser(@RequestBody User user) {
     userRepository.save(user);
+  }
+
+  @PutMapping("/users")
+  void updateUser(@RequestBody User user) {
+    if (userRepository.existsById(user.getId())) {
+      userRepository.save(user);
+    }
   }
 
   @DeleteMapping("/users/{id}")

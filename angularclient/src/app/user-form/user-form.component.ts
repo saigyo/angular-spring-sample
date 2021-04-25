@@ -17,6 +17,12 @@ export class UserFormComponent {
     private router: Router,
     private userService: UserService) {
     this.user = new User();
+    this.route.params.subscribe(params => {
+      let id = params['id'];
+      if (!!id || id === 0) {
+        this.userService.find(id).subscribe(result => this.user = result);
+      }
+    })
   }
 
   onSubmit() {

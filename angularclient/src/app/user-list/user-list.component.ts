@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 import {User} from '../model/user'
 import {UserService} from "../service/user.service";
 
@@ -11,7 +12,9 @@ export class UserListComponent implements OnInit {
 
   users: User[];
 
-  constructor(private userService: UserService) {
+  constructor(
+    private userService: UserService,
+    private router: Router) {
   }
 
   ngOnInit(): void {
@@ -24,5 +27,9 @@ export class UserListComponent implements OnInit {
     this.userService.delete(user).subscribe(_ => {
       this.users.splice(this.users.indexOf(user))
     })
+  }
+
+  edit(user: User) {
+    this.router.navigate(['/edituser', user.id])
   }
 }
