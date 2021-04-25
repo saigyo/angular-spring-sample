@@ -15,9 +15,13 @@
         <td>{{ user.name }}</td>
         <td><a href="mailto:{{ user.email }}">{{ user.email }}</a></td>
         <td>
-          <div class="col-md-2">
-            <button class="btn btn-danger" (click)="delete(user)">DELETE</button>
-            <button class="btn btn-light" (click)="edit(user)">EDIT</button>
+          <div class="row">
+            <div class="col-md-3">
+              <button class="btn btn-danger" (click)="delete(user)">DELETE</button>
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-light" (click)="edit(user)">EDIT</button>
+            </div>
           </div>
         </td>
       </tr>
