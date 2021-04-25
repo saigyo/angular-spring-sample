@@ -19,4 +19,10 @@ export class UserListComponent implements OnInit {
       this.users = data;
     })
   }
+
+  delete(user: User) {
+    this.userService.delete(user).subscribe(_ => {
+      this.users.splice(this.users.indexOf(user))
+    })
+  }
 }
