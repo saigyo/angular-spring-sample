@@ -24,11 +24,22 @@ then open a browser at http://localhost:8080
 
 ![Screenshot](https://github.com/saigyo/angular-spring-sample/blob/master/docs/angular-sample-app.png?raw=true)
 
+## Run Angular Dev Server
+
+```shell
+cd angularclient
+ng serve
+```
+
+then open a browser at http://localhost:4200
+
 ## Tech Stack
 
-- Maven
+- Maven 3
 - Java 11
-- Spring Boot
+- Spring Boot 2.4
 - H2 in-memory database
+- Node v14
+- NPM 6
 - Angular 10
 - Bootstrap
