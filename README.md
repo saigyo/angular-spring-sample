@@ -20,7 +20,9 @@ We use the [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-pl
 mvn spring-boot:run
 ```
 
-then open a browser on http://localhost:8080
+then open a browser at http://localhost:8080
+
+![Screenshot](https://github.com/saigyo/angular-spring-sample/blob/master/docs/angular-sample-app.png?raw=true)
 
 ## Tech Stack
 
