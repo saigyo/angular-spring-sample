@@ -9,7 +9,7 @@ The sample code is an extended derivation of the code presented in the article
 ## Build
 
 ```shell
-maven clean package
+mvn clean package
 ```
 
 We use the [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-plugin) to build and package the Angular frontend from maven.
@@ -17,7 +17,7 @@ We use the [frontend-maven-plugin](https://github.com/eirslett/frontend-maven-pl
 ## Run
 
 ```shell
-maven spring-boot:run
+mvn spring-boot:run
 ```
 
 then open a browser on http://localhost:8080
