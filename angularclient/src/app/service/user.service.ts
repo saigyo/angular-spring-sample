@@ -22,11 +22,11 @@ export class UserService {
     return this.http.get<User>(this.usersUrl + '/' + id);
   }
 
-  public save(user: User) {
+  public save(user: User): Observable<User> {
     return this.http.post<User>(this.usersUrl, user);
   }
 
-  public delete(user: User) {
-    return this.http.delete(this.usersUrl + '/' + user.id)
+  public delete(user: User): Observable<object> {
+    return this.http.delete(this.usersUrl + '/' + user.id);
   }
 }
